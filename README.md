@@ -70,16 +70,16 @@ JavaScript is class-less language (ES5 and lower). Classes can be simulated usin
 
 # Explained Patterns
 
-Constructor Pattern
-Module Pattern
-Revealing Module Pattern
-Singleton Pattern
-Observer Pattern
-Mediator Pattern
-Prototype Pattern
-Command Pattern
-Facade Pattern
-Factory Pattern
-Mixin Pattern
-Decorator Pattern
-Flyweight Pattern
+- [Constructor Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/constructor-pattern)
+- Module Pattern
+- Revealing Module Pattern
+- Singleton Pattern
+- Observer Pattern
+- Mediator Pattern
+- Command Pattern
+- Prototype Pattern
+- Facade Pattern
+- Factory Pattern
+- Mixin Pattern
+- Decorator Pattern
+- Flyweight Pattern

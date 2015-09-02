@@ -8,19 +8,19 @@ Object constructors are used to create specific types of objects - both preparin
 
 There are three ways to create new objects in JavaScript
 
-```
-    // Each of the options will create an empty object
+```js
+// Each of the options will create an empty object
 
-    var myObject = {}; // object, created with the Object constructor literal
+var myObject = {}; // object, created with the Object constructor literal
 
-    var myObject = Object.create(Object.prototype) // Using the Object.create method
+var myObject = Object.create(Object.prototype) // Using the Object.create method
 
-    var myObject = new Object(); // Using the Object constructor
+var myObject = new Object(); // Using the Object constructor
 ```
 
 There are four ways in which keys and properties can be assigned to an object
 
-```
+```js
 // ECMAScript 3 compatible approaches
 
 // 1. Dot notation
@@ -72,7 +72,7 @@ JavaScript doesn't have classes, but it does support a special constructor funct
 
 Inside the constructor, the keyword `this` references the newly created objects. A basic constructor may look like that:
 
-```
+```js
 // Defining the constructor
 
 function Car(model, color, age) {
