@@ -1,9 +1,6 @@
-# javascript-design-patterns
-Educational list of Javascript Design Patterns
-
 # What is a pattern
 
-А pattern is a reusable solution to a common problem in software design, in this case - a Javascript application.
+А pattern is a reusable solution to a common problem in software design, in this case - a JavaScript application.
 
 ## Why are they important
 
@@ -37,7 +34,7 @@ If we consider patterns a best practice, anti-pattern is the lesson we have lear
 - describes a **bad** solution to a particular problem which resulted in a bad situation occuring
 - describes how to get out of that situation and how to go to a good solution
 
-Examples of anti-patterns in Javascript:
+Examples of anti-patterns in JavaScript:
 
 - polluting the global namespace by defining a large number of variables in the global context
 - passing strings instead of functions to either `setTimeout` or `setInterval` as it triggers the use of `eval()`
