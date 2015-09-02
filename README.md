@@ -67,3 +67,19 @@ Some of this patterns are: Iterator, Mediator, Observer and Visitor.
 # Classes in JavaScript
 
 JavaScript is class-less language (ES5 and lower). Classes can be simulated using functions.
+
+# Explained Patterns
+
+Constructor Pattern
+Module Pattern
+Revealing Module Pattern
+Singleton Pattern
+Observer Pattern
+Mediator Pattern
+Prototype Pattern
+Command Pattern
+Facade Pattern
+Factory Pattern
+Mixin Pattern
+Decorator Pattern
+Flyweight Pattern
