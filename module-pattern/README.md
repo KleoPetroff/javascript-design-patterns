@@ -50,15 +50,15 @@ This gives us a clean solution for shielding logic by only exposing an interface
 
 ### Examples
 
-##### [A simple Module Pattern Example](http://aaa.com)
+##### [A simple Module Pattern Example](https://github.com/KleoPetroff/javascript-design-patterns/blob/master/module-pattern/examples/module-pattern.js)
 
 In this example, the parts of the code are unable to directly read the value of incrementCounter(), resetCounter() or showCounterValue(). The counter variable is actually fully shielded from the global scope so it acts like a private variable would - it exists only within the closure of the object, so that only the two functions can access it. Our methods are effectively namespaced, so we need to prefix any call with the name of the module (`myModule`).
 
-#### [Module Pattern Template](http://xxx.com)
+#### [Module Pattern Template](https://github.com/KleoPetroff/javascript-design-patterns/blob/master/module-pattern/examples/module-pattern-template.js)
 
 When working with the Module Pattern, we may find it useful to define a simple template that we can use for getting started with. This example covers namespacing, public and private variables and methods;
 
-#### [Shopping Basket](http://xxx.com)
+#### [Shopping Basket](https://github.com/KleoPetroff/javascript-design-patterns/blob/master/module-pattern/examples/shopping-basket.js)
 
 This is a simple basket organizer, implemented with the Module Pattern. The module is completely self-contained in a global variable called `myBasket`. The `basket` array in the module is kept private and so other parts of the application are unable to directly read it. It only exists with the module's closure and so the only methods able to access it are those with access to the scope (methods like `addItem`, `clearItems` etc.).
 
