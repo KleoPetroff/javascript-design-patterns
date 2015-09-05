@@ -121,3 +121,15 @@ This variation allows us to declare globals without consuming them and could sim
 ```
 
 // TODO: Add Frameworks and Libraries Module Pattern Implementations
+
+# Advantages of Module Pattern
+
+Firstly for starters, it's a lot cleaner. Secondary, it support private data. In the Module Pattern, public parts of our code are able to touch the private parts, however the outside environment is unable to touch the class's private part.
+
+# Disadvantages of Module Pattern
+
+The disadvantages of the Module Pattern are that we access both public and private members differently, when we wish to change visibility, the have to change each place the member was used.
+
+We also can't access private members in methods that are added to the object at a later point. That said, in many cases the Module pattern is still quite useful and when used correctly, has the potential to improve the structure of our applications.
+
+Other disadvantages include the inability to create unit tests for private members and additional complexity when bugs require fixes. Developers can't extend privates either.
