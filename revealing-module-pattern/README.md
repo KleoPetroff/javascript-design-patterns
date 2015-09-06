@@ -6,9 +6,11 @@ The Revealing Module Pattern came about as Heilmann was frustrated with the fact
 
 The result was an updated pattern where we would simply define all of our functions and variables in the private scope and return an anonymous object with pointers to the private functionality we wish to reveal as public.
 
-**An example can be found in the example folder.**
+An example can be found in the examples folder. - [Revealing Module Pattern Example](https://github.com/KleoPetroff/javascript-design-patterns/blob/master/revealing-module-pattern/examples/revealing-module-pattern.js)
 
 The pattern can be used to reveal private functions and properties with a more specific naming scheme.
+
+Example of this implementation can be found here - [Revealing Module Pattern Scheme](https://github.com/KleoPetroff/javascript-design-patterns/blob/master/revealing-module-pattern/examples/revealing-module-pattern-sheme.js)
 
 ## Advantages
 
