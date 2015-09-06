@@ -1,0 +1,11 @@
+{
+    "framework": "mocha",
+
+    "launch_in_dev": [
+        "chrome"
+    ],
+
+    "src_files": [
+        "examples/**/*.js"
+    ]
+}
