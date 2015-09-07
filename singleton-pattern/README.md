@@ -42,7 +42,7 @@ In JavaScript, Singletons serve as a shared resource namespace which isolate imp
     }());
 ```
 
-What makes the Singleton is the global access to the instance(in our case through `mySingleton.getInstance()``) as we don't call `new mySingleton()`.
+What makes the Singleton is the global access to the instance(in our case through `mySingleton.getInstance()`) as we don't call `new mySingleton()`.
 
 In the GoF book, the Singleton pattern is described as follows: _There must be exactly one instance of a class, and it must be accessible to clients from a well-known access point._
 
