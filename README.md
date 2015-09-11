@@ -74,7 +74,7 @@ JavaScript is class-less language (ES5 and lower). Classes can be simulated usin
 - [Module Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/module-pattern)
 - [Revealing Module Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/revealing-module-pattern)
 - [Singleton Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/singleton-pattern)
-- Observer Pattern
+- [Observer Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/observer-pattern)
 - Mediator Pattern
 - Command Pattern
 - Prototype Pattern
