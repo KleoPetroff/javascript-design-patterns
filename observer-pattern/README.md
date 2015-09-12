@@ -114,4 +114,4 @@ Now the **magazine** subscribes **clark** (in other words **clark** subscribess 
     magazine.subscribe(clark.saturdayNap);
 ```
 
-// TODO: Add tests and examples
+// TODO: Add tests
