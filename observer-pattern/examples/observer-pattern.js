@@ -1,67 +1,57 @@
-var publisher = {
-    subscribers: {
-        any: [] // event type: subscribers
-    },
-    subscribe: function (fn, type) {
-        type = type || 'any';
-        if (typeof this.subscribers[type] === "undefined") {
-            this.subscribers[type] = [];
-        }
-        this.subscribers[type].push(fn);
-    },
-    unsubscribe: function (fn, type) {
-        this.visitSubscribers('unsubscribe', fn, type);
-    },
-    publish: function (publication, type) {
-        this.visitSubscribers('publish', publication, type);
-    },
+function Click() {
+    this.handlers = []; // Observer
 
-    visitSubscribers: function (action, arg, type) {
-        var pubtype = type || 'any',
-            subscribers = this.subscribers[pubtype],
-            i,
-            max = subscribers.length;
+    this.subscribe = function(fn) {
+        this.handlers.push(fn);
+    };
 
-        for (i = 0; i < max; i += 1) {
-            if (action === 'publish') {
-                subscribers[i](arg);
-            } else {
-                if (subscribers[i] === arg) {
-                    subscribers.splice(i, 1);
-                }
+    this.unsubscribe = function(fn) {
+        this.handlers = this.handlers.filter(function(item) {
+            if(item !== fn) {
+                return item;
             }
+        });
+    };
+
+    this.fire = function(obj, thisObj) {
+        var scope = thisObj || window;
+        this.handlers.forEach(function(item) {
+            item.call(scope, obj);
+        });
+    };
+}
+
+// log helper
+
+var log = (function() {
+    'use strict';
+
+    var log = '';
+    return {
+        add: function(msg) {
+            log += msg + '\n';
+        },
+        show: function() {
+            console.log(log);
+            log = '';
         }
-    }
- };
+    };
+}());
 
- function makePublisher(o) {
-     var i;
-     for (i in publisher) {
-         if (publisher.hasOwnProperty(i) && typeof publisher[i] === "function") {
-             o[i] = publisher[i];
-         }
-     }
-     o.subscribers = {
-         any: []
-     };
- }
 
- var paper = {
-     daily: function() {
-         this.publish('big news today');
-     },
-     monthly: function() {
-         this.publish('interesting analysis', 'montly');
-     }
- };
+(function run() {
+    var clickHandler = function(item) {
+        log.add('fired: ' + item);
+    };
 
- makePublisher(paper);
+    var click = new Click();
 
- var joe = {
-     drinkCoffee: function(paper) {
-         console.log('Just read ' + paper);
-     },
-     sundayPreNap: function(montly) {
-         console.log('About to fall asleep reading this ' + monthly);
-     }
- };
+    click.subscribe(clickHandler);
+    click.fire('event #1');
+    click.unsubscribe(clickHandler);
+    click.fire('event #2');
+    click.subscribe(clickHandler);
+    click.fire('event #3');
+    
+    log.show();
+}());
