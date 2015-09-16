@@ -9,7 +9,7 @@ function Car(model, color, year) {
     this.year = year;
 
     this.information = function() {
-        return 'This car model is ' + this.model + ', with ' + this.color + ' color from ' + this.age + ' year.';
+        return 'This car model is ' + this.model + ', with ' + this.color + ' color from ' + this.year + ' year.';
     };
 }
 
@@ -18,8 +18,3 @@ function Car(model, color, year) {
 
 var honda = new Car('Civic', 'grey', 2007);
 var fiat = new Car('punto','blue', 2006);
-
-// Calling the object method
-
-console.log(honda.information());
-console.log(fiat.information());
