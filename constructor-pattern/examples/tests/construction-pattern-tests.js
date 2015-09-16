@@ -43,7 +43,7 @@ describe('Object Constructor', function() {
     });
 
     it('should return information about the car', function() {
-        assert.equal(hondaObject.information(), 'This car model is Civic, with grey color from undefined year.');
-        assert.equal(fiatObject.information(),'This car model is punto, with blue color from undefined year.');
+        assert.equal(hondaObject.information(), 'This car model is Civic, with grey color from 2007 year.');
+        assert.equal(fiatObject.information(),'This car model is punto, with blue color from 2006 year.');
     });
 });
