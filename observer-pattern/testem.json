@@ -2,7 +2,7 @@
     "framework": "Mocha",
 
     "src_files": [
-        "/examples/**/*.js"
+        "examples/**/*.js"
     ],
 
     "launch_in_dev": [
