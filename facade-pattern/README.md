@@ -5,6 +5,7 @@ The Facade Pattern provides a convenient higher-level interface to larger body o
 Facade Pattern is a structural pattern that can be seen in JavaScript libraries like jQuery where, although an implementation may support methods with a wide range of behaviors, only a "facade" or limited abstraction of these methods is presented to the public for use. For example, when handling browser events, you have the following methods:
 
 ` stopPropagation()` - traps the event and doesn't let it bubble up to the parent nodes
+
 `preventDefault()` - doesn't let the browser do the default action (for example, following a link or submitting a form)
 
 There are two separate methods with different purposes and they should be kept separated, but at the same time, they are often called together. So instead of duplicating the two method calls all over the application, you can create a facade method that calls both of them:
