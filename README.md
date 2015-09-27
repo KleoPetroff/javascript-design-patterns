@@ -80,6 +80,6 @@ JavaScript is class-less language (ES5 and lower). Classes can be simulated usin
 - [Prototype Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/prototype-pattern)
 - [Facade Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/facade-pattern)
 - [Factory Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/factory-pattern)
-- Mixin Pattern
+- [Mixin Pattern](https://github.com/KleoPetroff/javascript-design-patterns/tree/master/mixins)
 - Decorator Pattern
 - Flyweight Pattern
