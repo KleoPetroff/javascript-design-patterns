@@ -4,7 +4,7 @@
 
 ## Why are they important
 
-- parents are proven solutions. They provide solid approach to solving a particular problem.
+- patterns are proven solutions. They provide solid approach to solving a particular problem.
 - patterns can be easily reused.
 - patterns can be expressive
 

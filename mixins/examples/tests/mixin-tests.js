@@ -5,7 +5,7 @@ describe('Mixin', function() {
         it('should exist', function() {
             expect(Car).to.exist;
         });
-        it('should have return default values if no argument is passed', function() {
+        it('should return default values if no argument is passed', function() {
             var testCar = new Car({});
 
             expect(testCar.model).to.be.equal('no model given');
