@@ -1,0 +1,1 @@
+Most of the material is taken from [Learning JavaScript Design Patterns](http://addyosmani.com/resources/essentialjsdesignpatterns/book) by [Addy Osmani](http://twitter.com/addyosmani) and licensed under [Creative Commons Attribution-Noncommercial-No Derivative Works 3.0](http://creativecommons.org/licenses/by-nc-nd/3.0)
