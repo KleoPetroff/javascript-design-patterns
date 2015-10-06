@@ -1,0 +1,12 @@
+{
+    "framework": "mocha",
+    "src_files": [
+        "examples/tests/lib/chai.js",
+        "examples/flyweight-pattern.js",
+        "examples/tests/flyweight-pattern-tests.js"
+    ],
+
+    "launch_in_dev": [
+        "chrome"
+    ]
+}
