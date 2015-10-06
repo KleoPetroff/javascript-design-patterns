@@ -9,6 +9,8 @@ Let's see a simple example:
 ```js
 var Soldier = (function() {
     'use strict';
+    var Soldier = function() {};
+    
     this.prototype.Health = 10;
     this.prototype.FightingAbility = 15;
     this.prototype.Hunger = 0;
