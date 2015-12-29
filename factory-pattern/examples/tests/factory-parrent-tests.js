@@ -1,24 +1,25 @@
-var expect = chai.expect;
 var assert = chai.assert;
 
 describe('A Factory Pattern', function() {
     it('should have a parrent constructor', function() {
-        expect(CarMaker).to.exist;
+        assert.isDefined(CarMaker);
         assert.isFunction(CarMaker);
     });
     it('should have a factory method', function() {
-        expect(CarMaker.prototype.drive).to.be.property;
+        assert.isDefined(CarMaker.prototype.drive);
+        assert.isFunction(CarMaker.prototype.drive);
     });
     it('should have a static factory method', function() {
-        expect(CarMaker.factory).to.be.property;
+        assert.isDefined(CarMaker.factory);
+        assert.isFunction(CarMaker.factory)
     });
     it('should return a new instance of the specific type object', function() {
         var newSUV = CarMaker.factory('SUV');
-        expect(newSUV).to.be.an.instanceof(CarMaker['SUV']);
+        assert.instanceOf(newSUV, CarMaker['SUV']);
     });
     it('should have factory type objects', function() {
-        expect(CarMaker.SUV).to.exist;
-        expect(CarMaker.Compact).to.exist;
-        expect(CarMaker.Comvertable).to.exist;
+        assert.isDefined(CarMaker.SUV);
+        assert.isDefined(CarMaker.Compact);
+        assert.isDefined(CarMaker.Comvertable);
     });
 });
