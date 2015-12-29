@@ -1,30 +1,30 @@
-var expect = chai.expect;
+var assert = chai.assert;
 
 describe('Mixin', function() {
     describe('Constructor', function() {
         it('should exist', function() {
-            expect(Car).to.exist;
+            assert.isDefined(Car);
         });
         it('should return default values if no argument is passed', function() {
             var testCar = new Car({});
 
-            expect(testCar.model).to.be.equal('no model given');
-            expect(testCar.color).to.be.equal('no color given');
+            assert.equal(testCar.model, 'no model given');
+            assert.equal(testCar.color, 'no color given');
         });
     });
     describe('Mixin', function() {
         it('should exist as a constructor', function() {
-            expect(Mixin).to.exist;
+            assert.isDefined(Mixin);
         });
         it('should have driveForward method', function() {
-            expect(Mixin.prototype).to.have.property('driveForward');
+            assert.property(Mixin.prototype, 'driveForward');
 
         });
         it('should have driveBackward method', function() {
-            expect(Mixin.prototype).to.have.property('driveBackward');
+            assert.property(Mixin.prototype, 'driveBackward');
         });
         it('should have driveSideways method', function() {
-            expect(Mixin.prototype).to.have.property('driveSideways');
+            assert.property(Mixin.prototype, 'driveSideways');
         });
     });
     describe('Augment function', function() {
@@ -34,10 +34,9 @@ describe('Mixin', function() {
             };
             augment(testCar, Mixin);
 
-            expect(testCar.prototype).to.have.property('driveSideways');
-            expect(testCar.prototype).to.have.property('driveForward');
-            expect(testCar.prototype).to.have.property('driveBackward');
-
+            assert.property(testCar.prototype, 'driveSideways');
+            assert.property(testCar.prototype, 'driveForward');
+            assert.property(testCar.prototype, 'driveBackward');
         });
 
         it('should extend the passed object with the specific properties when passed', function() {
@@ -46,8 +45,8 @@ describe('Mixin', function() {
             };
             augment(testCar, Mixin, 'driveBackward', 'driveForward');
 
-            expect(testCar.prototype).to.have.property('driveBackward');
-            expect(testCar.prototype).to.have.property('driveForward');
+            assert.property(testCar.prototype, 'driveBackward');
+            assert.property(testCar.prototype, 'driveForward');
         });
     });
 });
