@@ -16,9 +16,11 @@ var inventoryManager = {
 };
 
 inventoryManager.execute = function(name) {
-    return inventoryManager[name] && inventoryManager[name].apply(inventoryManager, [].slice(arguments, 1));
+    return inventoryManager[name] && inventoryManager[name].apply(inventoryManager, [].slice.call(arguments, 1));
 };
 
 inventoryManager.execute('add', 'Harry Potter', '33214');
 inventoryManager.execute('check', 'Harry Potter', '33214');
 inventoryManager.execute('remove', 'Harry Potter', '33214');
+
+console.log(inventoryManager.execute('add', 'Kleo', '31234'));
