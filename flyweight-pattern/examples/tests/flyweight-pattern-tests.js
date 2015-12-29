@@ -2,7 +2,7 @@ var expect = chai.expect;
 var assert = chai.assert;
 
 
-describe('Flywight Pattern', function() {
+describe('Flyweight Pattern', function() {
     it('should exist', function() {
         assert.isDefined(Flyweight);
     });
@@ -19,7 +19,7 @@ describe('Flywight Pattern', function() {
         assert.equal(Flyweight.prototype.Name, 'Ball');
     });
 
-    it('should have Shape property in the prototype object of the contructor', function() {
+    it('should have Shape property in the prototype object of the constructor', function() {
         assert.property(Flyweight.prototype, 'Shape');
     });
     it('Name property should have default value "Circle"', function() {
@@ -28,10 +28,10 @@ describe('Flywight Pattern', function() {
     it('a new object should be able to overwrite the default values', function() {
         var testFlyweight = new Flyweight();
         testFlyweight.Color = 'blue';
-        testFlyweight.Name = 'Ballon';
+        testFlyweight.Name = 'Balloon';
         testFlyweight.Shape = 'Oval';
         assert.equal(testFlyweight.Color, 'blue');
-        assert.equal(testFlyweight.Name, 'Ballon');
+        assert.equal(testFlyweight.Name, 'Balloon');
         assert.equal(testFlyweight.Shape, 'Oval');
     });
 });
