@@ -1,8 +1,7 @@
 
 describe('Module Pattern Template', function() {
     it('should exist', function() {
-        var testTemplate = moduleTemplate;
-        assert.isObject(testTemplate);
+        assert.isObject(moduleTemplate);
     });
     it('should have public variable', function() {
         var testVariable = moduleTemplate.publicVariable;
@@ -11,10 +10,9 @@ describe('Module Pattern Template', function() {
     it('should increment the private variable', function() {
         var testTemplate = moduleTemplate;
         testTemplate.publicFunction('foo');
-        expect(testTemplate.showCounter()).to.be.at.equal(1);
+        assert.equal(testTemplate.showCounter(), 1);
     });
     it('should access the private method',function() {
-        var TeestTemplate = moduleTemplate;
-        expect(TeestTemplate.publicFunction('foo')).to.be.equal('foo');
+        assert.equal(moduleTemplate.publicFunction('foo'), 'foo');
     });
 });

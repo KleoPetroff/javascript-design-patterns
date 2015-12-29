@@ -1,13 +1,12 @@
 describe('Module Pattern', function() {
 
-    describe('with Object Liretal', function() {
+    describe('with Object Literal', function() {
         it('should be an object', function() {
-            var testObject = myObject;
-            assert.isObject(testObject);
+            assert.isObject(myObject);
         });
         it('should have text property', function() {
             var testVariable = myObject.displayText;
-            expect(testVariable).to.be.ok;
+            assert.isDefined(testVariable);
         });
         it('should have configuration object', function() {
             var testConfiguration = myObject.configuration;
@@ -17,9 +16,9 @@ describe('Module Pattern', function() {
         });
         it('should display text', function() {
             var testSayMethod = myObject.showMessage();
-            expect(testSayMethod).to.be.equal('This is a simple text to display');
+            assert.equal(testSayMethod, 'This is a simple text to display');
         });
-        it('should display configuraion', function() {
+        it('should display configuration', function() {
             myObject.configuration = {
                 useCache: false,
                 language: 'en'
@@ -27,7 +26,7 @@ describe('Module Pattern', function() {
             var testConfigDisplay = myObject.showConfiguration();
 
             assert.isFunction(myObject.showConfiguration);
-            expect(testConfigDisplay).to.be.equal('Your caching option is disabled and your current language is EN');
+            assert.equal(testConfigDisplay, 'Your caching option is disabled and your current language is EN');
         });
         it('should update configuration', function() {
             var testUpdateConfig = myObject;
