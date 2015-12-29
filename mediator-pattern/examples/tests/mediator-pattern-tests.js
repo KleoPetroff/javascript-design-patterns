@@ -1,22 +1,21 @@
-var expect = chai.expect;
 var assert = chai.assert;
 
 describe('A Mediator Pattern', function(){
-    describe('Player Contructor', function(){
+    describe('Player Constructor', function(){
         it('should exist', function() {
             assert.isFunction(Player);
         });
         it('should create new player', function() {
             var testPlayer = new Player('John');
 
-            expect(testPlayer).to.be.an.instanceof(Player);
+            assert.instanceOf(testPlayer, Player);
             assert.equal(testPlayer.name, 'John');
             assert.equal(testPlayer.points, 0);
         });
         it('should have play method',function() {
             var testPlayer = new Player('John');
 
-            expect(testPlayer).to.have.property('play');
+            assert.property(testPlayer, 'play');
         });
     });
     describe('Scoreboard Object', function(){
@@ -24,10 +23,10 @@ describe('A Mediator Pattern', function(){
             assert.isObject(scoreboard);
         });
         it('should have element property', function() {
-            expect(scoreboard).to.have.property('element');
+            assert.property(scoreboard, 'element');
         });
         it('should have update method', function() {
-            expect(scoreboard).to.have.property('element');
+            assert.property(scoreboard, 'element');
         });
     });
     describe('Mediator', function() {
