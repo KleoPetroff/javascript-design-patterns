@@ -1,25 +1,25 @@
-var expect = chai.expect;
+var assert = chai.assert;
 
 describe("Decorator Pattern", function() {
-    it("should have a main contructor", function() {
-        expect(BasicArmor).to.exist;
+    it("should have a main constructor", function() {
+        assert.isDefined(BasicArmor);
     });
     it("should be able to instantiate a new object", function() {
         var testInstance = new BasicArmor('testArmor');
 
-        expect(testInstance).to.be.instanceof(BasicArmor);
-        expect(chainArmor).to.be.instanceof(BasicArmor);
+        assert.instanceOf(testInstance,BasicArmor);
+        assert.instanceOf(chainArmor, BasicArmor);
     });
     it("should have decorators", function() {
         chainArmor.setColor('green');
         chainArmor.setHeight(55);
-        expect(chainArmor.color).to.be.equal('green');
-        expect(chainArmor.height).to.be.equal(55);
+        assert.equal(chainArmor.color, 'green');
+        assert.equal(chainArmor.height, 55);
     });
     it("should be present for the specific object only", function() {
         var testInstance = new BasicArmor('testArmor');
-        expect(testInstance.setColor).to.be.undefined;
-        expect(testInstance.color).to.be.undefined;
-        expect(testInstance.setHeight).to.be.undefined;
+        assert.isUndefined(testInstance.setColor);
+        assert.isUndefined(testInstance.color);
+        assert.isUndefined(testInstance.setHeight);
     });
 });
