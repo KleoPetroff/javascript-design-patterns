@@ -4,16 +4,13 @@ var assert = chai.assert;
 describe('Constructor pattern', function() {
     describe('Object', function() {
         it('should exist when created with object literal', function() {
-            var objectLiteral = name;
-            assert.isDefined(objectLiteral);
+            assert.isDefined(name);
         });
         it('should exist when created with Object.create method', function() {
-            var objectCreate = myName;
-            assert.isDefined(objectCreate);
+            assert.isDefined(myName);
         });
         it('should exist when create with Object constructor', function() {
-            var objectConstructor = otherName;
-            assert.isDefined(objectConstructor);
+            assert.isDefined(otherName);
         });
     });
 
