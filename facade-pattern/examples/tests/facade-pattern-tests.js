@@ -1,27 +1,26 @@
-var expect = chai.expect;
 var assert = chai.assert;
 
 describe('A Facade Pattern', function() {
     describe('Facade Object', function() {
         it('should exist', function() {
-            expect(Mortgage).to.be.ok;
+            assert.ok(Mortgage);
             assert.isFunction(Mortgage);
         });
         it('should have apply method', function() {
-            expect(Mortgage.apply).to.be.ok;
+            assert.ok(Mortgage.apply);
             assert.isFunction(Mortgage.apply);
             assert.property(Mortgage, 'apply');
         });
         it('should return a string result', function() {
             var john = new Mortgage('John');
-            expect(john.apply(3000)).to.equal('John has been approved for a 3000 mortgage')
+            assert.equal(john.apply(3000), 'John has been approved for a 3000 mortgage');
         });
     });
     describe('Helper Objects', function() {
         it('should exist', function() {
-            expect(Bank).to.be.ok;
-            expect(Credit).to.be.ok;
-            expect(Background).to.be.ok;
+            assert.ok(Bank);
+            assert.ok(Credit);
+            assert.ok(Background);
 
             assert.isFunction(Bank);
             assert.isFunction(Credit);
@@ -33,9 +32,9 @@ describe('A Facade Pattern', function() {
             assert.property(new Background(), 'verify');
         });
         it('should return true', function() {
-            expect(new Bank().verify('john', 3000)).to.equal(true);
-            expect(new Credit().verify('john', 3000)).to.equal(true);
-            expect(new Background().verify('john', 3000)).to.equal(true);
+            assert.equal(new Bank().verify('john', 3000), true);
+            assert.equal(new Credit().verify('john', 3000), true);
+            assert.equal(new Background().verify('john', 3000), true);
         });
     });
 });
