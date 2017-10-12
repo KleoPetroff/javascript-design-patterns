@@ -1,7 +1,3 @@
-<a target='_blank' rel='nofollow' href='https://app.codesponsor.io/link/aUZWkEPr1RGaPfgieFgfVFVG/KleoPetroff/javascript-design-patterns'>
-  <img alt='Sponsor' width='888' height='68' src='https://app.codesponsor.io/embed/aUZWkEPr1RGaPfgieFgfVFVG/KleoPetroff/javascript-design-patterns.svg' />
-</a>
-
 # What is a pattern
 
 А pattern is a reusable solution to a common problem in software design, in this case - a JavaScript application.
