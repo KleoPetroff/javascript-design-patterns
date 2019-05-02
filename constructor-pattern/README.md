@@ -57,18 +57,18 @@ Object.defineProperty(myObject, 'someKey', {
 Object.defineProperties(myObject, {
     'someKey': {
         value: 'Hello There!',
-        writable: false;
+        writable: false
     },
     'anotherKey': {
         value: 'Hey World',
-        writable: false;
+        writable: false
     }
 });
 
 ```
 ## Object Constructor
 
-JavaScript doesn't have classes, but it does support a special constructor functions that work with objects. By prefixing a call to that function with the keyword `new`, we tell the JavaScript we would like the function to behave as a constructor and instantiate new object.
+EcmaScript 5 doesn't have classes, but it does support a special constructor functions that work with objects. By prefixing a call to that function with the keyword `new`, we tell the JavaScript we would like the function to behave as a constructor and instantiate new object.
 
 Inside the constructor, the keyword `this` references the newly created objects. A basic constructor may look like that:
 
@@ -95,3 +95,26 @@ var volkswagen = new Car('Golf', 'grey', 2010);
 console.log(ford.information());
 console.log(volkswagen.information());
 ```
+## Using classes
+
+Introduced in ECMAScript 2015, classes are primarily syntactical sugar over JavaScript's existing prototype-based inheritance. Classes are in fact "special functions", and just as you can define function expressions and function declarations, the class syntax has two components: class expressions and class declarations.
+
+The object constructor example above can be rewritten using class like:
+
+```js
+class Car {
+    constructor(model, color, year) {
+        this.model = model;
+        this.color = color;
+        this.year = year;
+    }
+
+    information() {
+        return `This car model is ${this.model}, with ${this.color} color from ${this.year} year.`;
+    };
+}
+
+var ford = new Car('Escord', 'green', 2005);
+var volkswagen = new Car('Golf', 'grey', 2010);
+```
+

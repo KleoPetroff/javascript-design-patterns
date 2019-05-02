@@ -40,3 +40,10 @@ Object.defineProperties(otherName, {
     configurable: true
   }
 });
+
+
+module.exports = {
+  name,
+  myName,
+  otherName
+};
