@@ -1,0 +1,21 @@
+{
+  "name": "javascript-design-patterns",
+  "version": "1.0.0",
+  "description": "А pattern is a reusable solution to a common problem in software design, in this case - a JavaScript application.",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KleoPetroff/javascript-design-patterns.git"
+  },
+  "author": "Kliment Petrov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KleoPetroff/javascript-design-patterns/issues"
+  },
+  "homepage": "https://github.com/KleoPetroff/javascript-design-patterns#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^6.1.4"
+  }
+}
