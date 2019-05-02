@@ -1,38 +1,39 @@
-var expect = chai.expect;
-var assert = chai.assert;
+var expect = require('chai').expect;
 
-describe('A Command Pattern', function() {
-    describe('The Command Pattern', function() {
-        it('should exist', function() {
-            assert.ok(inventoryManager);
-            assert.isObject(inventoryManager);
-        });
-        it('should have an add method', function() {
-            assert.ok(inventoryManager.add);
-            assert.isFunction(inventoryManager.add);
-        });
-        it('should have delete method', function() {
-            assert.ok(inventoryManager.remove);
-            assert.isFunction(inventoryManager.remove);
-        });
-        it('should have check method', function() {
-            assert.ok(inventoryManager.check);
-            assert.isFunction(inventoryManager.check);
-        });
+const inventoryManager = require('../command-pattern');
 
-        it('should have execute method', function() {
-            assert.ok(inventoryManager.execute);
-            assert.isFunction(inventoryManager.execute);
+describe('A Command Pattern', () => {
+    describe('The Command Pattern', () => {
+        it('should exist', () => {
+            expect(inventoryManager).to.exist;
+            expect(typeof inventoryManager).to.equal('object');
+        });
+        it('should have an add method', () => {
+            expect(inventoryManager.add).to.exist;
+            expect(typeof inventoryManager.add).to.equal('function');
+        });
+        it('should have delete method', () => {
+            expect(inventoryManager.remove).to.exist;
+            expect(typeof inventoryManager.remove).to.equal('function');
+        });
+        it('should have check method', () => {
+            expect(inventoryManager.check).to.exist;
+            expect(typeof inventoryManager.check).to.equal('function');
         });
 
-        it('should have execute method which can call all other methods', function() {
-            var testInventoryAdd = inventoryManager.execute('add', 'Harry Potter', '33214');
-            var testInventoryRemove = inventoryManager.execute('remove', 'Harry Potter', '33214');
-            var testInventoryCheck = inventoryManager.execute('check', 'Harry Potter', '33214');
+        it('should have execute method', () => {
+            expect(inventoryManager.execute).to.exist;
+            expect(typeof inventoryManager.execute).to.equal('function');
+        });
 
-            assert.equal(testInventoryAdd, 'You have successfully added Harry Potter with ID: 33214');
-            assert.equal(testInventoryRemove, 'You have successfully removed Harry Potter with ID: 33214');
-            assert.equal(testInventoryCheck, 'You have selected Harry Potter with ID: 33214');
+        it('should have execute method which can call all other methods', () => {
+            const testInventoryAdd = inventoryManager.execute('add', 'Harry Potter', '33214');
+            const testInventoryRemove = inventoryManager.execute('remove', 'Harry Potter', '33214');
+            const testInventoryCheck = inventoryManager.execute('check', 'Harry Potter', '33214');
+
+            expect(testInventoryAdd).to.equal('You have successfully added Harry Potter with ID: 33214');
+            expect(testInventoryRemove).to.equal('You have successfully removed Harry Potter with ID: 33214');
+            expect(testInventoryCheck).to.equal('You have selected Harry Potter with ID: 33214');
         });
     });
 });
