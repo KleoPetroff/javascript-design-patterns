@@ -1,40 +1,49 @@
 'use strict';
 
-var Mortgage = function(name) {
-    this._name = name;
-};
+class Mortgage {
+    constructor(name) {
+        this.name = name;
+    }
 
-Mortgage.prototype = {
-    apply: function(amount) {
-        var result = 'approved';
-        if(!new Bank().verify(this._name, amount)) {
-             result = 'denied';
-        } else if(!new Credit().verify(this._name, amount)) {
-             result = 'denied';
-        } else if (!new Background().verify(this._name, amount)) {
+    apply(amount) {
+        let result = 'approved';
+
+        if (!Bank.verify(this.name, amount)) {
+            result = 'denied';
+        } else if (!Credit.verify(this.name, amount)) {
+            result = 'denied';
+        } else if (!Background.verify(this.name, amount)) {
             result = 'denied';
         }
-        return this._name + ' has been ' + result + ' for a ' + amount + ' mortgage';
-    }
-};
 
-var Bank = function() {
-    this.verify = function(name, amount) {
+        return `${this.name} has been ${result} for a ${amount} mortgage`;
+    }
+}
+
+class Bank {
+    static verify(name, amount) {
         // Other logic
         return true;
-    };
-};
+    }
+}
 
-var Credit = function() {
-    this.verify = function(name, amount) {
+class Credit {
+    static verify(name, amount) {
         // other logic
         return true;
-    };
-};
+    }
+}
 
-var Background = function() {
-    this.verify = function(name, amount) {
+class Background {
+    static verify(name, amount) {
         // other logic
         return true;
-    };
+    }
+}
+
+module.exports = {
+    Mortgage,
+    Credit,
+    Background,
+    Bank
 };

@@ -1,40 +1,40 @@
-var assert = chai.assert;
+const expect = require('chai').expect;
+const {Background, Bank, Credit, Mortgage} = require('../facade-pattern');
 
 describe('A Facade Pattern', function() {
     describe('Facade Object', function() {
         it('should exist', function() {
-            assert.ok(Mortgage);
-            assert.isFunction(Mortgage);
+            expect(Mortgage).to.exist;
         });
         it('should have apply method', function() {
-            assert.ok(Mortgage.apply);
-            assert.isFunction(Mortgage.apply);
-            assert.property(Mortgage, 'apply');
+            expect(Mortgage.apply).to.exist;
+            expect(typeof Mortgage.apply).to.equal('function');
+            expect(Mortgage.prototype.apply).to.exist;
         });
         it('should return a string result', function() {
-            var john = new Mortgage('John');
-            assert.equal(john.apply(3000), 'John has been approved for a 3000 mortgage');
+            const john = new Mortgage('John');
+            expect(john.apply(3000)).to.equal('John has been approved for a 3000 mortgage');
         });
     });
     describe('Helper Objects', function() {
         it('should exist', function() {
-            assert.ok(Bank);
-            assert.ok(Credit);
-            assert.ok(Background);
+            expect(Bank).to.exist;
+            expect(Credit).to.exist;
+            expect(Background).to.exist;
 
-            assert.isFunction(Bank);
-            assert.isFunction(Credit);
-            assert.isFunction(Background);
+            expect(typeof Bank).to.equal('function');
+            expect(typeof Credit).to.equal('function');
+            expect(typeof Background).to.equal('function');
         });
         it('should have verify methods', function() {
-            assert.property(new Bank(), 'verify');
-            assert.property(new Credit(), 'verify');
-            assert.property(new Background(), 'verify');
+            expect(Bank.verify).to.exist;
+            expect(Credit.verify).to.exist;
+            expect(Background.verify).to.exist;
         });
         it('should return true', function() {
-            assert.equal(new Bank().verify('john', 3000), true);
-            assert.equal(new Credit().verify('john', 3000), true);
-            assert.equal(new Background().verify('john', 3000), true);
+            expect(Bank.verify('john', 3000)).to.be.true;
+            expect(Credit.verify('john', 3000)).to.be.true;
+            expect(Background.verify('john', 3000)).to.be.true;
         });
     });
 });
