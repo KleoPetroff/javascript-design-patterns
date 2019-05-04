@@ -1,14 +1,14 @@
 'use strict';
 
-var BasicArmor = function(armorType, height) {
-    this.armorType = armorType;
-    this.height = 40;
-};
-
+class BasicArmor {
+    constructor(armorType, height = 40) {
+        this.armorType = armorType;
+        this.height = height;
+    }
+}
 
 // new instance of BasicArmor
-var chainArmor = new BasicArmor('chainArmor');
-
+const chainArmor = new BasicArmor('chainArmor');
 
 // Decorators
 chainArmor.setColor = function(color) {
@@ -26,3 +26,8 @@ chainArmor.setHeight(33);
 
 console.log(chainArmor.height); // 33
 console.log(chainArmor.color); // "grey"
+
+module.exports = {
+  BasicArmor,
+  chainArmor
+};
